@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <title>Projects - Portfolio</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      background-image: url("./img/background.jpg");
+      background-size: cover;
+      background-position: center;
+      overflow-x: hidden;
+      color: white;
+    }
+
+    nav {
+      width: 100%;
+      height: 10vh;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .logo {
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: rgb(58, 211, 3);
+      text-shadow: 0 0 10px rgb(58, 211, 3);
+    }
+
+    .nav-container .links {
+      display: flex;
+    }
+
+    .nav-container .links a {
+      font-size: 1.2rem;
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-container .links a:hover,
+    .nav-container .links .active {
+      color: rgb(58, 211, 3);
+      border-bottom: 2px solid rgb(58, 211, 3);
+    }
+
+    /* Projects Section */
+    .projects-container {
+      width: 100%;
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 1rem;
+    }
+
+    .projects-content {
+      width: 85%;
+      max-width: 1200px;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 0 20px rgba(58, 211, 3, 0.15);
+    }
+
+    .projects-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .projects-header h1 {
+      font-size: 2.5rem;
+      color: rgb(58, 211, 3);
+      text-shadow: 0 0 10px rgb(58, 211, 3);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      justify-items: center;
+      align-items: stretch;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(58, 211, 3, 0.2);
+      transition: all 0.3s ease;
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 15px rgba(58, 211, 3, 0.3);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: 0.4s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.05);
+      opacity: 0.85;
+    }
+
+    .project-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .project-info h3 {
+      color: rgb(58, 211, 3);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-info p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 1024px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-content {
+        width: 95%;
+        padding: 2rem;
+      }
+
+      .projects-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+        Porto<span>Folio.</span>
+      </div>
+      <div class="links">
+        <div class="link"><a href="index.html">Home</a></div>
+        <div class="link"><a href="about.html">About</a></div>
+        <div class="link"><a href="skill.html">Skills</a></div>
+        <div class="link active"><a href="Project.html">Projects</a></div>
+        <div class="link"><a href="contact.html">Contact</a></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="projects-container">
+    <div class="projects-content">
+      <div class="projects-header" data-aos="fade-down" data-aos-duration="1500">
+        <h1>My Projects</h1>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="C:\Users\vinne\Vinel Code\personalweb-2-main\img\Landing1.png" alt="Project 1">
+          <div class="project-info">
+            <h3>Landing Page Design</h3>
+            <p>Clean responsive design for a modern tech startup.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="C:\Users\vinne\Vinel Code\personalweb-2-main\img\codee1.png" alt="Project 2">
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio built with HTML, CSS & JavaScript.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+          <img src="C:\Users\vinne\Vinel Code\personalweb-2-main\img\UIUX1.png" alt="Project 3">
+          <div class="project-info">
+            <h3>UI/UX Dashboard</h3>
+            <p>Modern dashboard prototype using Figma & XD.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+  </script>
+</body>
+</html>
